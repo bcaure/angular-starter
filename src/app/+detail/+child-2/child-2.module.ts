@@ -1,33 +1,29 @@
-import { Child1Module } from './+child-1/child-1.module';
-import { Child2Module } from './+child-2/child-2.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { routes } from './detail.routes';
-import { DetailComponent } from './detail.component';
+import { routes } from './child-2.routes';
+import { Child2Component } from './child-2.component';
 
-console.log('`Detail` bundle loaded asynchronously');
+console.log('`Child2` bundle loaded asynchronously');
 
 @NgModule({
   declarations: [
     /**
      * Components / Directives/ Pipes
      */
-    DetailComponent,
+    Child2Component,
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    Child1Module,
-    Child2Module
   ],
   exports: [
-    DetailComponent
+    Child2Component
   ]
 })
-export class DetailModule {
+export class Child2Module {
   public static routes = routes;
 }

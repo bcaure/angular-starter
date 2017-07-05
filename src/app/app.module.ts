@@ -1,3 +1,4 @@
+import { DetailModule } from './+detail/detail.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -63,6 +64,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    DetailModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   /**

@@ -1,0 +1,22 @@
+<div class="grid">
+    <h1>Parent component</h1>    
+    
+    <div class="component span2 grid subgrid">
+        <span><![CDATA[<input type="text" [(ngModel)]="value" />]]></span> 
+        <input type="text" [(ngModel)]="value" /> 
+        <span>{{ value }}</span>
+        
+        <span><![CDATA[<input type="text" [(ngModel)]="object.inner" /> ]]></span> 
+        <input type="text" [(ngModel)]="object.inner" /> 
+        <span>{{ object | json }}</span>
+    </div>
+    
+    <div class="component">
+        <child-1 [object]="object" [value]="value"></child-1>
+    </div>
+    
+    <div class="component">
+        <child-1 [object]="object" [value]="value"></child-1>
+    </div>
+
+</div>

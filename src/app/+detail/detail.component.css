@@ -1,0 +1,12 @@
+div.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(0px, auto); 
+}
+.span2 {
+    grid-column: 1 / span 2;
+}
+.grid .subgrid {
+  grid-template-columns: 1fr 1fr 1fr;  
+}

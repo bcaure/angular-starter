@@ -1,31 +1,19 @@
-import {
-  Component,
-  OnInit,
-} from '@angular/core';
-/**
- * We're loading this component asynchronously
- * We are using some magic with es6-promise-loader that will wrap the module with a Promise
- * see https://github.com/gdi2290/es6-promise-loader for more info
- */
-
-console.log('`Barrel` component loaded asynchronously');
+import {  Component,} from '@angular/core';
 
 @Component({
   selector: 'barrel',
-  template: `
-    <h1>Hello from Barrel</h1>
-    <span>
-      <a [routerLink]=" ['./child-barrel'] ">
-        Child Barrel
-      </a>
-    </span>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: './barrel.component.html',
 })
-export class BarrelComponent implements OnInit {
+export class BarrelComponent {
 
-  public ngOnInit() {
-    console.log('hello `Barrel` component');
+  object;
+  constructor() {
+    this.object = {"inner":"init"};
   }
 
+  async() {
+    return new Promise((resolve) => 
+      setTimeout(() => resolve("examples"), 5000)
+    );   
+  }
 }

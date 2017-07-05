@@ -2,6 +2,15 @@
 /* This file is for setting global styles  */
 @import 'variables';
 
+* {
+  color: #00636F;
+  font-size: 20px;
+}
+
+span  {
+  font-family: monospace;
+}
+
 nav {
   margin-top: 16px;
   min-height: 40px;
@@ -26,4 +35,21 @@ nav a {
   border: 1px solid #000000;
   padding: 10px;
 
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(0px, auto);
+}
+.grid span input {
+  grid-column: 1 / 3;
+}
+.grid h1 {
+  grid-column: 1 / span 3;
+}
+
+input {
+  height: 30px;
 }

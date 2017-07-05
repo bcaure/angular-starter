@@ -1,9 +1,9 @@
 <div class="grid">
   <h1 class="sample-content">One-way databinding</h1>
 
-  <span><![CDATA[<input type="text" [value]="oneWay" (input)="oneWay=$event.target.value" />]]> </span> 
-  <input type="text" [value]="oneWay" (input)="oneWay=$event.target.value" /> 
-  <span>{{ oneWay|json }}</span>
+  <span><![CDATA[<input type="text" [ngModel]="oneWay" (ngModelChange)="oneWay=$event.target.value" />]]> </span> 
+  <input type="text" [ngModel]="oneWay" (ngModelChange)="oneWay=$event" /> 
+  <span>{{ oneWay }}</span>
 
   <h1 class="sample-content">Two-way databinding</h1>
 

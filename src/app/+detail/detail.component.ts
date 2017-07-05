@@ -8,10 +8,11 @@ import { Component, OnInit} from '@angular/core';
 export class DetailComponent implements OnInit {
 
   object;
-  value;
+  object2;
 
   constructor() {
-     this.object = {"inner": "init"};
+    this.object = {"inner": "init"};
+    this.object2 = {"inner": "init"};
   }
 
   public ngOnInit() {

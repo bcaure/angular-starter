@@ -32,6 +32,7 @@ import { XLargeDirective } from './home/x-large';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+import { FoldingDirective } from "./directives/folding.directive";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -55,7 +56,8 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     NoContentComponent,
-    XLargeDirective
+    XLargeDirective,
+    FoldingDirective
   ],
   /**
    * Import Angular's modules.

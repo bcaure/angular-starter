@@ -1,22 +1,21 @@
-<div class="grid">
-    <h1>Parent component</h1>    
+<div class="flex">
+   
     
-    <div class="component span2 grid subgrid">
-        <span><![CDATA[<input type="text" [(ngModel)]="value" />]]></span> 
-        <input type="text" [(ngModel)]="value" /> 
-        <span>{{ value }}</span>
-        
-        <span><![CDATA[<input type="text" [(ngModel)]="object.inner" /> ]]></span> 
+    <div class="component grid">      
+        <h1>Parent component</h1>         
+        <span><![CDATA[[(ngModel)]="object.inner"]]></span> 
         <input type="text" [(ngModel)]="object.inner" /> 
-        <span>{{ object | json }}</span>
     </div>
     
     <div class="component">
-        <child-1 [object]="object" [value]="value"></child-1>
+        <child-1 [inner]="object.inner"></child-1>
     </div>
     
     <div class="component">
-        <child-1 [object]="object" [value]="value"></child-1>
+        <child-2 [object]="object"></child-2>
     </div>
 
+    <div class="component">
+        <child-3 [inner]="object.inner" (change)="object.inner = $event"></child-3>
+    </div>
 </div>

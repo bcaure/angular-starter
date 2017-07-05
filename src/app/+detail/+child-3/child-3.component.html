@@ -1,0 +1,7 @@
+<div class="grid" folding>
+  <h1 class="sample-content"><![CDATA[<child-3 [inner]="object.inner" (change)="object.inner = $event">]]></h1>
+
+  <span><![CDATA[[(ngModel)]="inner" (ngModelChange)="onChange($event)"]]></span> 
+  <input type="text" [(ngModel)]="inner" (ngModelChange)="onChange($event)" />
+
+</div>

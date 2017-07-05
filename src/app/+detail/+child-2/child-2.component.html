@@ -1,0 +1,7 @@
+<div class="grid" *ngIf="object" folding>
+  <h1 class="sample-content"><![CDATA[<child-2 [object]="object">]]></h1>
+
+  <span><![CDATA[[(ngModel)]="object.inner"]]></span> 
+  <input type="text" [(ngModel)]="object.inner"/>
+
+</div>
